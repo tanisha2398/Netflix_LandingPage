@@ -41,8 +41,19 @@ img {
   position: relative;
   background: url("../img/background.jpg") no-repeat center center/cover;
 }
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
 .showcase-top {
   position: relative;
+  z-index: 2;
   height: 90px;
 }
 
@@ -61,6 +72,31 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 4rem;
+}
+.showcase-content h1 {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin: 0 0 2rem;
+}
+.showcase-content p {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+}
 /*button*/
 .btn {
   display: inline-block;
@@ -86,13 +122,13 @@ img {
 }
 
 .btn-xl {
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 1.5rem 2.1rem;
   text-transform: uppercase;
 }
 
 .btn-lg {
-  font-size: 1rem;
+  font-size: 1.3rem;
   padding: 0.8rem 1.3rem;
   text-transform: uppercase;
 }
