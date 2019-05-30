@@ -134,6 +134,15 @@ img {
   background: #000;
   color: #fff;
 }
+/* Hide content Initially */
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+  display: none;
+}
+.show {
+  display: block !important;
+}
 #tab-1-content .tab-1-content-inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -162,7 +171,51 @@ img {
   align-content: center;
   justify-content: center;
 }
+.table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table thead th {
+  text-transform: uppercase;
+  padding: 0.8rem;
+}
+.table tbody tr td {
+  color: #999;
+  padding: 0.8rem 1.2rem;
+  text-align: center;
+}
 
+.table tbody tr td:first-child {
+  text-align: left;
+}
+.table tbody tr:nth-child(odd) {
+  background: #222;
+}
+
+/* footer */
+.footer {
+  max-width: 75%;
+  margin: 1rem auto;
+  overflow: auto;
+}
+.footer,
+.footer a {
+  color: #999;
+  font-size: 0.9rem;
+}
+.footer p {
+  margin-bottom: 1.5rem;
+}
+.footer .footer-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+.footer li {
+  line-height: 1.9;
+}
 /*container*/
 .container {
   max-width: 70%;
@@ -225,4 +278,65 @@ img {
   font-size: 1.3rem;
   padding: 0.8rem 1.3rem;
   text-transform: uppercase;
+}
+
+@media (max-width: 960px) {
+  .showcase {
+    height: 70vh;
+  }
+  .hide-sm {
+    display: none;
+  }
+  .showcase-top img {
+    top: 30%;
+    left: 5%;
+    transform: translate(0);
+  }
+  .showcase-content h1 {
+    font-size: 3.7rem;
+    line-height: 1;
+  }
+  .showcase-content p {
+    font-size: 1.5rem;
+  }
+  .footer .footer-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn-xl {
+    font-size: 1.5rem;
+    padding: 1.4rem 2rem;
+  }
+  .text-xl {
+    font-size: 1.5rem;
+  }
+  .text-lg {
+    font-size: 1.3rem;
+  }
+  .text-md {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase::after {
+    box-shadow: inset 50px 50px 100px #000000, inset -50px -50px 100px #000000;
+  }
+  #tab-1-content .tab-1-content-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #tab-2-content .tab-2-content-top {
+    display: block;
+    text-align: center;
+  }
+
+  #tab-2-content .tab-2-content-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-xl {
+    font-size: 1rem;
+    padding: 1.2rem 1.6rem;
+    text-transform: uppercase;
+  }
 }
