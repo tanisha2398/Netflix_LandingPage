@@ -1,6 +1,6 @@
 # Netflix-Landing Page
 
-A chatting application using JavaScript, socket.io, node.js, express.js
+A lANDING pAGE using JavaScript, CSS and HTML
 
 ## Screencast
 
