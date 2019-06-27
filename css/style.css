@@ -279,6 +279,9 @@ img {
   padding: 0.8rem 1.3rem;
   text-transform: uppercase;
 }
+.btn-icon {
+  margin-left: 1rem;
+}
 
 @media (max-width: 960px) {
   .showcase {
